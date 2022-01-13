@@ -3,6 +3,10 @@ body {
     background: linear-gradient(270deg, #45b175, black, #e54c46);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite forwards;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes gradient {
@@ -22,14 +26,11 @@ body {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
-
-
 .container h2 
 {
     width: 100%;
-    color: white;
+    color: black;
     font-size: 36px;
     text-align: center;
     text-shadow: 0px 0px 20px white;
@@ -41,22 +42,47 @@ body {
 		color: white;
 	}
 	50% {
-		color: black;
+		color: white;
 	}
 	100% {
-		color: black;
+		color: white;
 	}
 }
+
+input[type="text"]
+{
+    border: 2px solid black;
+    color: black;
+}
+
 input[type="submit"]
 {
     border: 2px solid white;
     padding: 7px 35px;
     cursor: pointer;
     outline: none;
-    background: #45f3ff;
+    background: white;
     color: #000;
     font-size: 18px;
     border-radius: 2px;
+}
+
+input[type="submit"]:hover
+{
+    animation: explode 0.5s linear forwards;
+}
+
+@keyframes explode 
+{
+    0% 
+    {
+        background-color: white;
+    }
+
+    100%
+    {
+        background-color: turquoise;
+    }
 }
 
 p {
